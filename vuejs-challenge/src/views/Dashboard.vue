@@ -1,18 +1,24 @@
 <template>
-  <div class="home">
-    <Sidebar />
-    <TopNav />
+  <b-container>
+    <div class="app">
+    <SidebarLink/>
+    <div class="main">
+      <TopNav />
     <Individuals />
     <Companies/>
     <Gender/>
     <LatestSignUps />
     <TotalSignUps />
+    </div>
   </div>
+    
+    
+  </b-container>
 </template>
 
 <script>
 // @ is an alias to /src
-import Sidebar from "@/components/Dashboard/Sidebar/Sidebar.vue";
+import SidebarLink from "@/views/SidebarLink.vue";
 import TopNav from "@/components/Dashboard/Sidebar/TopNav.vue";
 import Individuals from "@/components/Dashboard/Content/Individuals.vue";
 import Companies from "@/components/Dashboard/Content/Companies.vue";
@@ -22,15 +28,28 @@ import TotalSignUps from "@/components/Dashboard/Content/TotalSignUps.vue";
 
 
 export default {
-  name: "Home",
+  name: "Dashboard",
   components: {
-   Sidebar,
+   SidebarLink,
    TopNav,
    Individuals,
    Companies,
    Gender,
    LatestSignUps,
-   TotalSignUps
-  }
+   TotalSignUps,
+  },
+    data: () => ({
+    menu: [ '12', '34', '45' ],
+
+  }),
 };
 </script>
+<style scoped>
+.app {
+  display: flex;
+}
+.main {
+  flex-grow: 1;
+  background: red;
+}
+</style>

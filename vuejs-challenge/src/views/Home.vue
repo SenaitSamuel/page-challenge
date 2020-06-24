@@ -1,23 +1,43 @@
 <template>
-  <div class="home">
-    <Navigation />
-    <Overview />
+  <div class="page-wrapper">
+  <div class="nav-wrapper ">
+  <Navigation />
+  </div>
+   <div  class=" overview-wrapper ">
+    <OverviewPage />
+    </div>
+    <div class="">      
     <Dashboard />
   </div>
+   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Navigation from "@/components/Header/Navigation.vue";
-import Overview from "@/components/Overview/Overview.vue";
+import Navigation from "@/views/Navigation.vue";
+import OverviewPage from "@/views/OverviewPage.vue";
 import Dashboard from "@/views/Dashboard.vue";
+
 
 export default {
   name: "Home",
   components: {
     Navigation,
-    Overview,
+    OverviewPage,
     Dashboard
-  }
+  },
 };
 </script>
+
+<style scoped >
+.page-wrapper{
+  width:100%;
+}
+.nav-wrapper{
+  border-bottom: 2px solid var(--primary-color);
+}
+.overview-wrapper{
+  background-color: var(--secondary-background-color);
+}
+
+</style>
