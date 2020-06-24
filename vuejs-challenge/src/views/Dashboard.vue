@@ -4,15 +4,23 @@
     <Sidebar>sidebar content</Sidebar>
     <div class="main">
        <TopNav />
-    <Individuals />
-    <Companies/>
-    <Gender/>
-    <LatestSignUps />
-    <TotalSignUps />
+    <b-row>
+      <b-col cols="7">
+        <b-row>
+          <b-col cols="12"><Individuals :styles="myStyles" /></b-col>
+          <b-col cols="12"><Companies/></b-col>
+        </b-row>
+      </b-col>
+      <b-col cols="5">
+        <b-row>
+           <b-col cols="12"><TotalSignUps /></b-col>
+          <b-col cols="12"><Gender/></b-col>
+           <b-col cols="12"> <LatestSignUps /></b-col>
+        </b-row>
+      </b-col>
+    </b-row>    
       </div>
-  </div>
-    
-  
+  </div> 
   </b-container>
 </template>
 
@@ -23,7 +31,7 @@ import TopNav from "@/components/Dashboard/Sidebar/TopNav.vue";
 import Individuals from "@/components/Dashboard/Content/Individuals.vue";
 import Companies from "@/components/Dashboard/Content/Companies.vue";
 import Gender from "@/components/Dashboard/Content/Gender.vue";
-import LatestSignUps from "@/components/Dashboard/Content/LatestSignUps.vue";
+import LatestSignUps from "@/views/LatestSignUps.vue";
 import TotalSignUps from "@/components/Dashboard/Content/TotalSignUps.vue";
 
 
@@ -37,6 +45,23 @@ export default {
    Gender,
    LatestSignUps,
    TotalSignUps
+  },
+  data() {
+    return {
+      chartData: {
+        Books: 24,
+        Magazine: 30,
+        Newspapers: 10
+      }
+    }
+  },
+   computed: {
+    myStyles () {
+      return {
+        background:"blue",
+        position: 'relative'
+      }
+    }
   }
 };
 </script>

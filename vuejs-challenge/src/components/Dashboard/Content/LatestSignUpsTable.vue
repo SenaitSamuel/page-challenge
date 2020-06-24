@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: "LatestSignups",
+  name: "LatestSignUpsTable",
  props: {
       columns: Array,
       data: Array
@@ -37,5 +37,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-
+.table{
+  color:white;
+}
 </style>

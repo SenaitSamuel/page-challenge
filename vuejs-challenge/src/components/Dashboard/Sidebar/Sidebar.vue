@@ -17,7 +17,8 @@
 </template>
 
 <script>
-import Group from "../../../assets/icons/funds.svg"
+import Group from "../../../assets/icons/Group 174.svg"
+import Funds from "../../../assets/icons/funds.svg"
 import Path from "../../../assets/icons/Path 188.svg"
 import history from "../../../assets/icons/history.svg"
 import verification from "../../../assets/icons/verification-window-button.svg"
@@ -32,7 +33,7 @@ export default {
        width: {
       default: '20em',
     },
-    menu: [ Group, Path, history,verification, locked],
+    menu: [ Group, Funds, Path, history,verification, locked],
     };
   },
  

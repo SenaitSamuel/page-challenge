@@ -1,15 +1,44 @@
-<template>
-  <div class="hello">
-      this is Compnies
-  </div>
-</template>
+
 
 <script>
+import { Line } from 'vue-chartjs'
+
 export default {
-  name: "Companies",
-  props: {
+   name: "Companies",
+  extends: Line,
+  mounted() {
+    this.renderChart(
+      {
+        labels: [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July"
+        ],
+        datasets: [
+          {
+            label: "Data 1",
+            data: [20,6,0,9,5,10,2],
+            backgroundColor: "transparent",
+            borderColor: "rgba(1, 116, 188, 0.50)",
+            pointBackgroundColor: "rgba(171, 71, 188, 1)"
+          }
+        ]
+      },
+      {
+        responsive: true,
+        maintainAspectRatio: false,
+        title: {
+          display: true,
+          text: "My Data"
+        }
+      }
+    );
   }
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
