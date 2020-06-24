@@ -1,25 +1,38 @@
 <template>
+
 <div class="sidebarContainer">
     <transition
         name="slide"
     >
       <div v-if="isOpen" class="sidebar" :style="{ width }">
+         <b-nav-item href="#" v-for=" (icon, index) in menu " :key="index">
+           <b-img :src="icon"  alt="icon"></b-img>
+          </b-nav-item>
       </div>
     </transition>
     <div class="toggle" @click="isOpen = !isOpen">&lt;&gt;</div>
-  </div>
  
+  </div>
+
 </template>
 
 <script>
+import Group from "../../../assets/icons/funds.svg"
+import Path from "../../../assets/icons/Path 188.svg"
+import history from "../../../assets/icons/history.svg"
+import verification from "../../../assets/icons/verification-window-button.svg"
+import locked from "../../../assets/icons/locked-padlock (1).svg"
+
 export default {
   name: "Sidebar",
- 'width': {
-      default: '20em',
-    },
+
   data() {
     return {
       isOpen: true,
+       width: {
+      default: '20em',
+    },
+    menu: [ Group, Path, history,verification, locked],
     };
   },
  
@@ -28,6 +41,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+
 .sidebarContainer {
   display: flex;
 }

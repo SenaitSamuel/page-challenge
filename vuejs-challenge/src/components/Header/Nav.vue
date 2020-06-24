@@ -9,7 +9,7 @@
 <script>
 export default {
   name: "Nav",
-  props: [ "link" , "icon" ],
+  props: [ "link" ],
 };
 </script>
 

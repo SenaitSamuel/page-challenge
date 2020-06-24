@@ -4,7 +4,7 @@
     <b-container>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav>
-      <b-navbar-nav class="ml-auto">
+      <b-navbar-nav>
         <b-nav-item href="#" v-for=" (link, index) in menu " :key="index">
           <Nav
           :link="link"
@@ -25,7 +25,7 @@ export default {
     Nav
   },
   data: () => ({
-    menu: [ '12', '34', '45' ],
+    menu: [ 'Signups', 'investments', 'Revenue', 'Exits', 'Trades'],
 
   }),
 };
