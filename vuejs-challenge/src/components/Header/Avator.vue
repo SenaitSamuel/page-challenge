@@ -22,6 +22,7 @@ export default {
   padding-right: var(--Nav-link-padding) !important;
   padding-left: var(--Nav-link-padding) !important;
    padding-bottom: 10px !important;
+   color:white!important
  
 }
 .avator-time{

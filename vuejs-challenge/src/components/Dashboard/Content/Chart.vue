@@ -4,23 +4,11 @@
 import { Line } from 'vue-chartjs'
 
 export default {
-   name: "Individuals",
+   name: "Chart",
   extends: Line,
-  props: {
-    labels: {
-      type: Array,
-      default: () => ['June19','Jul19','Aug19','Sep19','Oct19','Nov19','Dec19']
-    },
-    datalabel: {
-       type: String,
-       default: 'Individuals'
-    },
-    chartdata: {
-	  type: Array,
-      default: () => [2,9,3,4,7,3,9]
-    }
-  },
-  data () {
+  props:["labels", "datalabel", "chartdata"],
+
+  data ()  {
     return {
       gradient: null,
     }
@@ -54,6 +42,7 @@ export default {
       showAllTooltips: true,
       scales: {
             yAxes: [{
+                 display: true,
                 gridLines: {
                     display: false
                 },
@@ -62,6 +51,7 @@ export default {
                 }
             }],
             xAxes: [{
+                 display: true,
                 gridLines: {
                     display: false
                 },

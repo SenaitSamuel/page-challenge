@@ -5,15 +5,14 @@ import { Chart } from "chart.js";
 export default {
   name: "TotalSignUps",
   extends: Doughnut,
-  props: {
-  
-  },
+  props: ["labels", "datalabel", "chartdata"],
+
   mounted() {
     this.renderChart(
       {
-       labels: ['Individuals', 'Companies'],
+       labels: this.labels,
          datasets: [ {
-            label: 'Total Signups',
+            label: this.datalabel,
             backgroundColor: [
             '#ff56ee',
             '#1bfbe4',           
@@ -22,11 +21,17 @@ export default {
             '#ff56ee',
             '#1bfbe4',            
             ],
-             data: [284, 364]
+             data: this.chartdata
          }],
-         text: '648'
+         text: '648',
+          
          
-      }
+      },
+       { 
+         responsive: true, 
+        maintainAspectRatio: false,
+         cutoutPercentage: 80
+         },
     );
     this.textCenter()
   },

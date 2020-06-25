@@ -1,5 +1,5 @@
 <template>
-  <b-container>
+  <b-container class="top-Navbar">
   <b-navbar toggleable="lg" type="dark" variant="info">
     <b-container>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -33,5 +33,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.bg-info {
+    background-color: var(--main-background-color) !important;
+}
+.top-Navbar{
+   border-bottom: 2px solid var(--secondary-background-color);
+}
+.nav-item {
+  padding-right: var(--Nav-link-padding) !important;
 
+}
 </style>

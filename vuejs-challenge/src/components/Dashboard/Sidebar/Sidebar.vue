@@ -5,12 +5,14 @@
         name="slide"
     >
       <div v-if="isOpen" class="sidebar" :style="{ width }">
+         <b-navbar-nav>
          <b-nav-item href="#" v-for=" (icon, index) in menu " :key="index">
            <b-img :src="icon"  alt="icon"></b-img>
           </b-nav-item>
+          </b-navbar-nav>
       </div>
     </transition>
-    <div class="toggle" @click="isOpen = !isOpen">&lt;&gt;</div>
+  
  
   </div>
 
@@ -49,7 +51,7 @@ export default {
 .sidebar {
   flex-grow: 1;
   padding: 0.5em;
-  background: blue;
+  background: var(--main-background-color);
 }
 .toggle {
   margin: 0.5em;
@@ -60,6 +62,10 @@ export default {
 }
 .slide-enter, .slide-leave-to {
   margin-left: -20em;
+}
+.nav-item{
+  padding-bottom: 40px;
+  padding-right: 40px;
 }
 
 

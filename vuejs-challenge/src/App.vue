@@ -17,7 +17,7 @@
 body {
   color: var( --primary-text-color) !important;
   background-color: var(--main-background-color) !important;
-  font-family: sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.4;
 }
 .app{
@@ -26,38 +26,29 @@ body {
 ul{
   list-style-type: none; 
 }
-
-h1 {
-  font-size: 3em;
-  line-height: 1;
-  margin-bottom: 0.5em;
-}
-h2 {
-  font-size: 2em;
-  margin-bottom: 0.75em;
-}
-h3 {
-  font-size: 1.5em;
-  line-height: 1;
-  margin-bottom: 1em;
-}
-h4 {
-  font-size: 1.2em;
-  line-height: 1.25;
-  margin-bottom: 1.25em;
-}
-h5 {
-  font-size: 1em;
-  font-weight: bold;
-  margin-bottom: 1.5em;
-}
-h6 {
-  font-size: 1em;
-  font-weight: bold;
-  margin-bottom: 1.5em;
-}
 .container {
     padding-right: 0 !important;
     padding-left: 0 !important;
 }
+.card{
+  background-color: var(--secondary-background-color) !important;
+  padding:10px;
+}
+select{
+  background-color: var(--secondary-background-color) !important;
+  color:white !important;
+  border-color:var(--secondary-background-color) !important;
+  border-radius: 0px !important;
+}
+ .primary-color{
+    color: var(--tertiary-color);
+    }
+    .secondary-color{
+    color: var(--secondary-color);
+    }
+    .tertiary-color{
+    color: var(--primary-color)
+
+    }
+ 
 </style>

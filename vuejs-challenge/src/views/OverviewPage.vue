@@ -1,17 +1,18 @@
 <template>
   <b-container>
   <b-row>
-     <b-col cols="1">
-       <ul>
-         <li>
-           <select v-model="selected">
+    
+     <b-col md="2" sm="12" xs="12">
+      <ul>
+      <li>
+          <select v-model="selected">
          <option> {{ selected }}</option>
         </select> 
-         </li>
-       </ul>
+      </li>
+    </ul>
        
    </b-col>
-         <b-col cols="11" v-for=" (option, index) in allOPtions " :key="index">
+         <b-col md="10" sm="12" xs="12" v-for=" (option, index) in allOPtions " :key="index">
        <Overview
        :TotalSignups ="option.overview.totalSignUps"
         :LastWeek ="option.overview.lastWeek"
@@ -34,7 +35,7 @@ export default {
   },
    data: function() {
     return{
-       selected : 'overview'
+       selected : 'Overview'
     }
  },
      computed: mapGetters(['allOPtions'])

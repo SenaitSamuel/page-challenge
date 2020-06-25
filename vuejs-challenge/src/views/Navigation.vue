@@ -4,7 +4,7 @@
     <b-img :src="logo" width="150" alt="logo"></b-img>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav>
-      <b-navbar-nav class=" mx-auto">
+      <b-navbar-nav class=" ml-auto">
         <b-nav-item href="#" v-for=" (link, index) in menu " :key="index">
           <Nav
           :link="link"
@@ -59,7 +59,7 @@ export default {
   z-index: 1;
 }
 nav.bg-info {
-  background:linear-gradient(90deg, var(--main-background-color) 60%, var(--primary-color) 40%) !important;
+  background:linear-gradient(90deg, var(--main-background-color) 64%, var(--primary-color) 40%) !important;
  
 }
 .navbar-nav {
@@ -68,7 +68,7 @@ nav.bg-info {
  .navbar-nav .nav-link {
   padding-right: var(--Nav-link-padding) !important;
   padding-left: var(--Nav-link-padding) !important;
-  text-align:center !important;
+  text-align: center !important;
 }
 
 

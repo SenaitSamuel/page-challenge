@@ -27,46 +27,27 @@
 <script>
 // @ is an alias to /src
 import LatestSignUpsTable from "@/components/Dashboard/Content/LatestSignUpsTable.vue";
-const tableColumns = ['Id', 'Name', 'Salary', 'Country', 'City']
+const tableColumns = [ 'Name', 'Salary']
   const tableData = [{
-    id: 1,
-    name: 'Dakota Rice',
-    salary: '$36.738',
-    country: 'Niger',
-    city: 'Oud-Turnhout'
+    name: 'David Hansen',
+    salary: '23-03-2020-2PM',
+   
   },
   {
-    id: 2,
-    name: 'Minerva Hooper',
-    salary: '$23,789',
-    country: 'Curaçao',
-    city: 'Sinaai-Waas'
+    name: 'Shopify',
+    salary: '05-03-2020-10:30AM',
+  
   },
   {
-    id: 3,
-    name: 'Sage Rodriguez',
-    salary: '$56,142',
-    country: 'Netherlands',
-    city: 'Baileux'
+    name: 'Arvid,Realtree AB',
+    salary: '05-03-2020-3PM',
+    
   },
-  {
-    id: 4,
-    name: 'Philip Chaney',
-    salary: '$38,735',
-    country: 'Korea, South',
-    city: 'Overland Park'
-  },
-  {
-    id: 5,
-    name: 'Doris Greene',
-    salary: '$63,542',
-    country: 'Malawi',
-    city: 'Feldkirchen in Kärnten'
-  }]
+  ]
 export default {
   name: "Home",
   components: {
-   LatestSignUpsTable
+LatestSignUpsTable
   
   }, 
   data () {
@@ -75,10 +56,6 @@ export default {
           columns: [...tableColumns],
           data: [...tableData]
         },
-        table2: {
-          columns: [...tableColumns],
-          data: [...tableData]
-        }
       }
     }
 };
