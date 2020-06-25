@@ -3,7 +3,7 @@ import { Doughnut} from "vue-chartjs";
 import { Chart } from "chart.js";
 
 export default {
-  name: "TotalSignUps",
+  name: "DoughnutChart",
   extends: Doughnut,
   props: ["labels", "datalabel", "chartdata"],
 
@@ -30,8 +30,16 @@ export default {
        { 
          responsive: true, 
         maintainAspectRatio: false,
-         cutoutPercentage: 80
+         cutoutPercentage: 80,
+          legend: {
+                    display:false,
+                    labels: {
+                        boxWidth:15,
+                        position:'right'
+                    }
+                },
          },
+
     );
     this.textCenter()
   },

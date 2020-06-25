@@ -50,5 +50,8 @@ select{
     color: var(--primary-color)
 
     }
+  .content-wrapper{
+     background-color: var(--secondary-background-color) !important;
+  }
  
 </style>

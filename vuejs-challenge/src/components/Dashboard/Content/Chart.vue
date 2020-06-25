@@ -1,69 +1,64 @@
 
-
 <script>
 import { Line } from 'vue-chartjs'
 
 export default {
-   name: "Chart",
+  name: "Chart",
   extends: Line,
-  props:["labels", "datalabel", "chartdata"],
+  props:["labels", "datalabel", "chartdata",  "text"],
 
-  data ()  {
-    return {
-      gradient: null,
-    }
-  },
+  data: () => ({
+     gradient: null
+     }) ,
+  
   mounted () {
-    this.gradient = this.$refs.canvas.getContext('2d').createLinearGradient(0, 0, 0, 90)
-
-
-    this.gradient.addColorStop(0, 'rgb(78, 255, 207)')
-    this.gradient.addColorStop(1, 'rgb(8, 164, 188)');
-
-
+    this.gradient = this.$refs.canvas.getContext('2d').createLinearGradient(0, 0, 0,90)
+    this.gradient.addColorStop(0.7, 'rgb(8, 164, 188)');
+    this.gradient.addColorStop(0.5, 'rgb(24, 27, 36)')
 
     this.renderChart({
+      
       labels: this.labels,
-      datasets: [
-        {
+      datasets: [{
           label: this.datalabel,
           pointBackgroundColor: 'white',
           pointBorderColor: 'white',
           backgroundColor: this.gradient,
           data: this.chartdata
         }
-      ],
-   
+      ],  
     },
-    {
-
-      responsive: true, 
+    { responsive: true, 
       maintainAspectRatio: false,
-      showAllTooltips: true,
-      scales: {
+      showAllTooltips: false,
+       title:{
+         display:true,
+          text:this.text,
+          fontSize:20
+          },
+        legend:{
+             display:false,
+             },
+        scales: {
             yAxes: [{
-                 display: true,
                 gridLines: {
                     display: false
                 },
                 ticks: {
-                  display: false
+                  display: true
                 }
             }],
             xAxes: [{
-                 display: true,
                 gridLines: {
                     display: false
                 },
                 ticks: {
-                  display: false
+                  display: true
                 }
             }]
        }
        } )
-
   }
-
 }
 </script>
 

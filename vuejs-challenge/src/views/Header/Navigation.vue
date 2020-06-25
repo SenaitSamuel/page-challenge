@@ -25,9 +25,9 @@
 </template>
 
 <script>
-import logo from "../assets/images/logo.png"
+import logo from "../../assets/images/logo.png"
 import Nav from "@/components/Header/Nav.vue";
-import image from "../assets/images/avatar.png"
+import image from "../../assets/images/avatar.png"
 import Avator from "@/components/Header/Avator.vue";
 export default {
   name: "Navigation",
@@ -59,7 +59,7 @@ export default {
   z-index: 1;
 }
 nav.bg-info {
-  background:linear-gradient(90deg, var(--main-background-color) 64%, var(--primary-color) 40%) !important;
+  background:linear-gradient(90deg, var(--main-background-color) 64%, rgb(8, 164, 188) 40%) !important;
  
 }
 .navbar-nav {

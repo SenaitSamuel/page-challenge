@@ -1,10 +1,10 @@
 <template>
   <div class="page-wrapper">
-  <div class="nav-wrapper ">
+  <div class="nav-wrapper">
   <Navigation />
   </div>
    <div  class=" overview-wrapper mt-3">
-    <OverviewPage />
+    <Overview />
     </div>
     <div class="">      
     <Dashboard />
@@ -14,16 +14,16 @@
 
 <script>
 // @ is an alias to /src
-import Navigation from "@/views/Navigation.vue";
-import OverviewPage from "@/views/OverviewPage.vue";
-import Dashboard from "@/views/Dashboard.vue";
+import Navigation from "@/views/Header/Navigation.vue";
+import Overview from "@/views/Overview/Overview.vue";
+import Dashboard from "@/views/Dashboard/Dashboard.vue";
 
 
 export default {
   name: "Home",
   components: {
     Navigation,
-    OverviewPage,
+    Overview,
     Dashboard
   },
 };

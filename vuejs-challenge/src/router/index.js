@@ -10,6 +10,46 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home
+  },
+  {
+    path: "/",
+    name: "Charts",
+    component: Home
+  },
+  {
+    path: "/",
+    name: "Help",
+    component: Home
+  },
+  {
+    path: "/",
+    name: "Signups",
+    component: Home
+  },
+  {
+    path: "/",
+    name: "Signups",
+    component: Home
+  },
+  {
+    path: "/",
+    name: "investments",
+    component: Home
+  },
+  {
+    path: "/",
+    name: "Revenue",
+    component: Home
+  },
+  {
+    path: "/",
+    name: "Exits",
+    component: Home
+  },
+  {
+    path: "/",
+    name: "Trades",
+    component: Home
   }
 ];
 

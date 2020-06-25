@@ -29,7 +29,7 @@ import Overview from "@/components/Overview/Overview.vue";
 import { mapGetters } from "vuex"
 
 export default {
-  name: "OveriewPage",
+  name: "Overiew",
  components: {
     Overview,
   },
