@@ -3,7 +3,7 @@
   <div class="nav-wrapper">
     <Navigation />
   </div>
-  <div class="overview-wrapper mt-3">
+  <div class="overview-wrapper p-3 ">
     <Overview />
   </div>
   <div class="dashboard-wrapper">

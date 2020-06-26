@@ -13,15 +13,10 @@ export default {
        labels: this.labels,
          datasets: [ {
             label: this.datalabel,
-            backgroundColor: [
-            '#ff56ee',
-            '#1bfbe4',           
-            ],
-            hoverBackgroundColor: [
-            '#ff56ee',
-            '#1bfbe4',            
-            ],
-             data: this.chartdata
+            backgroundColor: ['#de4fd4','#1bfbe4'],
+            hoverBackgroundColor: ['#de4fd4','#1bfbe4' ],
+            borderWidth: 0,
+            data: this.chartdata
          }],
          text: '648',
           
