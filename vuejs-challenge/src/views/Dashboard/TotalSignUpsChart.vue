@@ -1,11 +1,11 @@
 <template>
 <b-row class="content-wrapper p-3 mb-3">
-  <b-col cols="6" >
+  <b-col md="6" sm="12" xs="12" >
     <DoughnutChart :styles="myStyles" 
         :chartdata="chartdata"
       />
   </b-col>
-   <b-col cols="6">
+   <b-col md="6" sm="12" xs="12">
         <ul class="mt-5">             
         <li><p class="mb-5 text-title">{{datalabel}} </p></li>
         <li class="mb-2"> Individuals<span class="line_individual">284</span></li>

@@ -7,13 +7,13 @@
       <TopNav />
       <b-container>
         <b-row>
-          <b-col cols="7">
+          <b-col md="7" sm="12" xs="12">
             <b-row mx-2>
               <IndividualChart/>
               <CompaniesChart/>
             </b-row>
           </b-col>
-          <b-col cols="5">
+          <b-col md="5" sm="12" xs="12">
             <b-row>
              <TotalSignUpsChart/>
             <b-col cols="12">
