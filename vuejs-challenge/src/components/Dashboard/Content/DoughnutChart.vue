@@ -13,35 +13,35 @@ export default {
        labels: this.labels,
          datasets: [ {
             label: this.datalabel,
-            backgroundColor: ['#de4fd4','#1bfbe4'],
-            hoverBackgroundColor: ['#de4fd4','#1bfbe4' ],
+            backgroundColor: ["#ff56ee" ,"#1bfbe4"],
+            hoverBackgroundColor: [ "#ff56ee","#1bfbe4" ],
             borderWidth: 0,
             data: this.chartdata
          }],
-         text: '648',
-          
-         
+         text:"648",         
       },
        { 
-         responsive: true, 
+        responsive: true, 
         maintainAspectRatio: false,
-         cutoutPercentage: 80,
-          legend: {
-                    display:false,
-                    labels: {
-                        boxWidth:15,
-                        position:'right'
-                    }
-                },
-         },
-
+        cutoutPercentage: 80,
+        legend: {
+          display:false,
+          labels: {
+            boxWidth:15,
+             position:"right"
+            }
+          },
+        },
     );
     this.textCenter()
   },
+
   methods:{
-    textCenter() {
-     var originalDoughnutDraw = Chart.controllers.doughnut.prototype.draw;
+   
+   textCenter() {
+    var originalDoughnutDraw = Chart.controllers.doughnut.prototype.draw;
     Chart.helpers.extend(Chart.controllers.doughnut.prototype, {
+   
     draw: function() {
         originalDoughnutDraw.apply(this, arguments);
         
@@ -50,9 +50,9 @@ export default {
         var width = chart.width;
         var height = chart.height;
 
-        ctx.font = '40px Arial '
-        ctx.fillStyle = 'white';
-        ctx.textBaseline = 'middle';
+        ctx.font = "40px Arial" 
+        ctx.fillStyle = "white";
+        ctx.textBaseline = "middle";
 
         var text = chart.config.data.text,
             textX = Math.round((width - ctx.measureText(text).width) / 2),

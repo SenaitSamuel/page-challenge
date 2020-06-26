@@ -25,18 +25,18 @@ export default {
    DoughnutChart, 
   },
 
-    data : () =>({
-    labels: [ 'Individuals', 'Companies'],
+    data: () => ({
+    labels: [ "Individuals", "Companies"],
     datalabel:"Total Signups",
     chartdata:[284, 364],
     }) ,
 
     computed: {
     myStyles : () => ({
-        height: '200px',
-        width: '90%',
-        position: 'relative',
-        background:"rgb(24, 27, 36)",
+      height: "200px",
+      width: "90%",
+      position: "relative",
+      background:"rgb(24, 27, 36)",
     }),
     } 
 };

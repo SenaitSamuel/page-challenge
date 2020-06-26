@@ -1,25 +1,20 @@
 <template>
   <b-navbar toggleable="lg" type="dark" variant="info">
     <b-container>
-    <b-img :src="logo" width="150" alt="logo"></b-img>
-    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-    <b-collapse id="nav-collapse" is-nav>
-      <b-navbar-nav class=" ml-auto">
-        <b-nav-item href="#" v-for=" (link, index) in menu " :key="index">
-          <Nav
-          :link="link"
-          />   
+      <b-img :src="logo" width="150" alt="logo"></b-img>
+      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+      <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-nav class=" ml-auto">
+          <b-nav-item href="#" v-for=" (link, index) in menu" :key="index">
+          <Nav :link="link"/>   
           </b-nav-item>
-              <Avator
-           :image ="image"
-           :name ="name"
-           :date ="date"
-           :time ="time"
-           
-          />
-            
-      </b-navbar-nav>
-    </b-collapse>
+          <Avator
+          :image ="image"
+          :name ="name"
+          :date ="date"
+          :time ="time"/>
+        </b-navbar-nav>
+      </b-collapse>
     </b-container>
   </b-navbar>
 </template>
@@ -36,9 +31,9 @@ export default {
     Avator
   },
   data: () => ({
-    menu: [ 'Account', 'Charts', 'Help' ],
-     logo: logo,
-     name: "Elsa Andersen",
+    menu: [ "Account", "Charts", "Help" ],
+    logo: logo,
+    name: "Elsa Andersen",
     image: image,
     date: "17-02-2020",
     time:"2.45PM"
@@ -59,10 +54,8 @@ export default {
   z-index: 1;
 }
 nav.bg-info {
-  background:linear-gradient(90deg, var(--main-background-color) 67%, rgb(78, 255, 207) 60%,
-    rgb(8, 164, 188) 100%) !important;
-    
- 
+  background:linear-gradient(90deg, var(--main-background-color) 67%, rgb(9, 176, 181) 60%,
+    rgb(8, 164, 188) 100%) !important; 
 }
 .navbar-nav {
   padding-top: 8px !important;

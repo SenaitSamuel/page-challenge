@@ -1,9 +1,7 @@
 <template>
-<b-navbar-nav class="ml-auto">
-        <b-nav-item href="#">{{link}}</b-nav-item>
-      
-      </b-navbar-nav>
-    
+  <b-navbar-nav class="ml-auto">
+   <b-nav-item href="#">{{link}}</b-nav-item>
+  </b-navbar-nav>
 </template>
 
 <script>

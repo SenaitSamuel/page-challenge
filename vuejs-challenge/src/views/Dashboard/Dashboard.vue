@@ -4,30 +4,30 @@
     <Sidebar/>
     </div>
     <div class="main">
-       <TopNav />
-    <b-container>
-    <b-row>
-      <b-col cols="7">
-        <b-row mx-2>
-          <IndividualChart/>
-          <CompaniesChart/>
-        </b-row>
-      </b-col>
-      <b-col cols="5">
+      <TopNav />
+      <b-container>
         <b-row>
-          <TotalSignUpsChart/>
-          <b-col cols="12">
-            <Gender/>
+          <b-col cols="7">
+            <b-row mx-2>
+              <IndividualChart/>
+              <CompaniesChart/>
+            </b-row>
           </b-col>
-           <b-col cols="12">
+          <b-col cols="5">
+            <b-row>
+             <TotalSignUpsChart/>
+            <b-col cols="12">
+              <Gender/>
+            </b-col>
+            <b-col cols="12">
              <LatestSignUps />
             </b-col>
-         </b-row>
-      </b-col>
-    </b-row> 
-    </b-container>   
-      </div>
-  </b-container>
+            </b-row>
+          </b-col>
+        </b-row> 
+      </b-container>   
+    </div>
+</b-container>
 </template>
 
 <script>
@@ -40,8 +40,6 @@ import TotalSignUpsChart from "@/views/Dashboard/TotalSignUpsChart.vue"
 import Gender from "@/components/Dashboard/Content/Gender.vue";
 import LatestSignUps from "@/components/Dashboard/Content/LatestSignUps.vue";
 
-
-
 export default {
   name: "Dashboard",
   components: {
@@ -53,7 +51,6 @@ export default {
   Gender,
   LatestSignUps,
   },
-
 };
 </script>
 

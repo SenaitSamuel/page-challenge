@@ -1,21 +1,13 @@
 <template>
-
-<div class="sidebarContainer mt-4">
-    <transition
-        name="slide"
-    >
-      <div v-if="isOpen" class="sidebar" :style="{ width }">
-         <b-navbar-nav>
-         <b-nav-item href="#" v-for=" (icon, index) in menu " :key="index">
-           <b-img :src="icon"  alt="icon"></b-img>
-          </b-nav-item>
-          </b-navbar-nav>
-      </div>
-    </transition>
-  
- 
+  <div class="sidebarContainer mt-4">
+    <div>
+      <b-navbar-nav>
+        <b-nav-item href="#" v-for=" (icon, index) in menu " :key="index">
+         <b-img :src="icon"  alt="icon"></b-img>
+        </b-nav-item>
+      </b-navbar-nav>
+    </div>
   </div>
-
 </template>
 
 <script>
@@ -29,16 +21,9 @@ import locked from "../../../assets/icons/locked-padlock (1).svg"
 export default {
   name: "Sidebar",
 
-  data() {
-    return {
-      isOpen: true,
-       width: {
-      default: '20em',
-    },
+  data: () => ({
     menu: [ Group, Funds, Path, history,verification, locked],
-    };
-  },
- 
+  }),
 };
 </script>
 
@@ -67,6 +52,4 @@ export default {
   padding-bottom: 40px;
   padding-right: 40px;
 }
-
-
 </style>
