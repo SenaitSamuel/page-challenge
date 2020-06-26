@@ -59,7 +59,9 @@ export default {
   z-index: 1;
 }
 nav.bg-info {
-  background:linear-gradient(90deg, var(--main-background-color) 64%, rgb(8, 164, 188) 40%) !important;
+  background:linear-gradient(90deg, var(--main-background-color) 67%, rgb(78, 255, 207) 60%,
+    rgb(8, 164, 188) 100%) !important;
+    
  
 }
 .navbar-nav {
@@ -69,7 +71,8 @@ nav.bg-info {
   padding-right: var(--Nav-link-padding) !important;
   padding-left: var(--Nav-link-padding) !important;
   text-align: center !important;
+   text-transform: uppercase !important;
+   font-size: 14px;
 }
-
 
 </style>

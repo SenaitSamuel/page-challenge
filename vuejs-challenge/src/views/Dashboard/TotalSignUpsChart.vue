@@ -1,20 +1,18 @@
 <template>
-    <b-col cols="12" class="mb-3">
-        <b-row class="content-wrapper">
-            <b-col cols="6" >
-                <DoughnutChart :styles="myStyles" 
-                :chartdata="chartdata"
-                />
-            </b-col>
-            <b-col cols="6">
-                <ul class="mt-5">             
-                <li><h5 class="mb-4">{{datalabel}} </h5></li>
-                <li class="mb-4"> Individuals<span class="line_individual">284</span></li>
-                <li class="mt-4"> Companies <span  class="line_companies">364</span></li>
-                </ul>
-            </b-col>
-       </b-row>
-   </b-col>        
+<b-row class="content-wrapper p-3 mb-3">
+  <b-col cols="6" >
+    <DoughnutChart :styles="myStyles" 
+        :chartdata="chartdata"
+      />
+  </b-col>
+   <b-col cols="6">
+        <ul class="mt-5">             
+        <li><p class="mb-5 text-title">{{datalabel}} </p></li>
+        <li class="mb-2"> Individuals<span class="line_individual">284</span></li>
+        <li class="mt-2"> Companies <span  class="line_companies">364</span></li>
+        </ul>
+    </b-col>
+</b-row>       
 </template>
 
 <script>
@@ -35,26 +33,29 @@ export default {
 
     computed: {
     myStyles : () => ({
-        height: '250px',
-        width: '100%',
+        height: '200px',
+        width: '90%',
         position: 'relative',
         background:"rgb(24, 27, 36)",
-        display:'inline-block'
     }),
     } 
 };
 </script>
 
 <style scoped>
-li{
-  display: block;
-  padding-right: 30px;
-  
+.row {
+     margin-right: 0px !important;
+     margin-left: 15px !important
 }
-li span{
-  display: inline-block;
-  text-align: center;
-  padding-left: 40px;
+li{
+ display: inline-block;
+  padding-right: 40px; 
+}
+.text-title{
+  font-size: 20px;
+}
+li span{ 
+  padding-left: 20px;
 }
 .line_individual:after{
   content: "";

@@ -12,7 +12,7 @@ export default new Vuex.Store({
         totalSignUps: 648,
         lastWeek: 12,
         totalInvestment: 102,
-        averageInvestment: "Nok345,565",
+        averageInvestment: "NOK345,565",
         totalExits: 23,
       }
     }

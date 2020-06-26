@@ -55,7 +55,7 @@ export default {
         var width = chart.width;
         var height = chart.height;
 
-        ctx.font = '40px Montserrat-Regular'
+        ctx.font = '40px Arial '
         ctx.fillStyle = 'white';
         ctx.textBaseline = 'middle';
 

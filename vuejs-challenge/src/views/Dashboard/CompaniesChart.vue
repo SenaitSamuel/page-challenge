@@ -3,8 +3,9 @@
         <Chart :styles="myStyles"
         :text="text"
         :labels="labels" 
-        :datalabel="datalabel"
-        :chartdata="chartdata"
+        :datalabel_2="datalabel_2"
+        :chartdata_2="chartdata_2"
+        
         />
     </b-col>         
 </template>
@@ -21,8 +22,8 @@ export default {
   data : () =>({
       text:" Companies",
       labels: [ 'June19','Jul19','Aug19','Sep19','Oct19','Nov19','Dec19'],
-      chartdata:[2,9,3,4,7,3,9],
-      datalabel:"Companies",
+      chartdata_2:[2,9,3,4,7,3,9],
+      datalabel_2:"Companies",
     }),
    computed: {
     myStyles : () =>  ({

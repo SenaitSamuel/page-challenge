@@ -1,6 +1,6 @@
 <template>
 
-<div class="sidebarContainer">
+<div class="sidebarContainer mt-4">
     <transition
         name="slide"
     >

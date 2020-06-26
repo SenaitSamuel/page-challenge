@@ -26,7 +26,7 @@ export default {
     }) ,
    computed: {
     myStyles : () =>  ({
-        height: '320px',
+        height: '300px',
         width: '100%',
         position: 'relative',
         background:"rgb(24, 27, 36)",

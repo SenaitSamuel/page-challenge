@@ -1,15 +1,15 @@
 <template>
-  <div class="page-wrapper">
+<div class="page-wrapper">
   <div class="nav-wrapper">
-  <Navigation />
+    <Navigation />
   </div>
-   <div  class=" overview-wrapper mt-3">
+  <div class="overview-wrapper mt-3">
     <Overview />
-    </div>
-    <div class="">      
+  </div>
+  <div class="dashboard-wrapper">
     <Dashboard />
   </div>
-   </div>
+</div>
 </template>
 
 <script>
@@ -17,7 +17,6 @@
 import Navigation from "@/views/Header/Navigation.vue";
 import Overview from "@/views/Overview/Overview.vue";
 import Dashboard from "@/views/Dashboard/Dashboard.vue";
-
 
 export default {
   name: "Home",

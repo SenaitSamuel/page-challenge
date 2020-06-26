@@ -1,27 +1,25 @@
 <template>
-  <b-container>
+<b-container>
   <b-row>
-    
-     <b-col md="2" sm="12" xs="12">
+    <b-col md="2" sm="12" xs="12">
       <ul>
-      <li>
+        <li>
           <select v-model="selected">
-         <option> {{ selected }}</option>
-        </select> 
-      </li>
-    </ul>
-       
-   </b-col>
-         <b-col md="10" sm="12" xs="12" v-for=" (option, index) in allOPtions " :key="index">
-       <Overview
+            <option> {{ selected }}</option>
+          </select>
+        </li>
+      </ul>
+    </b-col>
+    <b-col md="10" sm="12" xs="12" v-for=" (option, index) in allOPtions " :key="index">
+      <Overview
        :TotalSignups ="option.overview.totalSignUps"
         :LastWeek ="option.overview.lastWeek"
         :TotalInvestments ="option.overview.totalInvestment"
         :AveragInvestment ="option.overview.averageInvestment"
         :TotalExits ="option.overview.totalExits" />
-         </b-col>             
+    </b-col>
   </b-row>
-  </b-container>
+</b-container>
 </template>
 
 <script>
@@ -33,17 +31,16 @@ export default {
  components: {
     Overview,
   },
-   data: function() {
-    return{
+   data: () => ({
        selected : 'Overview'
-    }
- },
-     computed: mapGetters(['allOPtions'])
-};
+    }),
+    
+    computed: mapGetters(['allOPtions'])
+     
+    };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped >
-
 /* end of overview */
 </style>

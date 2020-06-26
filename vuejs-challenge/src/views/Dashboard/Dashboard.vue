@@ -1,5 +1,5 @@
 <template>
-  <b-container class="app">
+<b-container class="dashboard">
     <div class="sidebar mt-5">
     <Sidebar/>
     </div>
@@ -8,7 +8,7 @@
     <b-container>
     <b-row>
       <b-col cols="7">
-        <b-row>
+        <b-row mx-2>
           <IndividualChart/>
           <CompaniesChart/>
         </b-row>
@@ -58,7 +58,7 @@ export default {
 </script>
 
 <style scoped>
-.app {
+.dashboard {
   display: flex;
 }
 .main {

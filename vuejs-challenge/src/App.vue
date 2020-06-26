@@ -17,8 +17,11 @@
 body {
   color: var( --primary-text-color) !important;
   background-color: var(--main-background-color) !important;
-  font-family: "Montserrat", sans-serif;
-  line-height: 1.4;
+  font-family: 'Montserrat', sans-serif !important;
+  color: #787d8a;
+  font-size: 18px;
+  line-height: 1.4px;
+  font-weight: 300
 }
 .app{
   color: var( --primary-text-color);
