@@ -67,5 +67,14 @@ nav.bg-info {
    text-transform: uppercase !important;
    font-size: 14px;
 }
+@media (max-width: 991.98px){
+.navbar-collapse{
+  background-color: rgb(9, 176, 181);
+}
+.navbar-nav .nav-link{
+  text-align: left !important;
+}
+}
+
 
 </style>

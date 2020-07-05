@@ -32,4 +32,12 @@ export default {
 .avator-time{
     display: block;
 }
+@media (max-width: 991.98px){
+.avator li{
+  display: block !important;
+ padding: 10px 0;
+}
+}
+
+
 </style>
